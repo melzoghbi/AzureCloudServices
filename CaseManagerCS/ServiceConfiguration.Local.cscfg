@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ServiceConfiguration serviceName="CaseManagerCS" xmlns="http://schemas.microsoft.com/ServiceHosting/2008/10/ServiceConfiguration" osFamily="4" osVersion="*" schemaVersion="2015-04.2.6">
+  <Role name="Case Manager Web">
+    <Instances count="1" />
+    <ConfigurationSettings>
+      <Setting name="Microsoft.WindowsAzure.Plugins.Diagnostics.ConnectionString" value="UseDevelopmentStorage=true" />
+      <Setting name="ServiceBusConnectionString" value="Endpoint=sb://sflcc-ns.servicebus.windows.net/;SharedAccessKeyName=RootManageSharedAccessKey;SharedAccessKey=+O5kcrMFJSy80t+HMfX8YPDPqi0QN5g6CDE+w3EUtL8=" />
+      <Setting name="StorageConnectionString" value="DefaultEndpointsProtocol=https;AccountName=sflcc;AccountKey=Ym9GPe7ThCl1cIFKtyDbUD75yBVbmCGEc6zaY5x6Ky6cHiA1sIPvn1cJyxgBUlgi7Jiw+vJ8uuWtZlRwwYK/PA==" />
+    </ConfigurationSettings>
+  </Role>
+  <Role name="Case Manager Worker Role">
+    <Instances count="1" />
+    <ConfigurationSettings>
+      <Setting name="Microsoft.WindowsAzure.Plugins.Diagnostics.ConnectionString" value="UseDevelopmentStorage=true" />
+      <Setting name="StorageConnectionString" value="DefaultEndpointsProtocol=https;AccountName=sflcc;AccountKey=Ym9GPe7ThCl1cIFKtyDbUD75yBVbmCGEc6zaY5x6Ky6cHiA1sIPvn1cJyxgBUlgi7Jiw+vJ8uuWtZlRwwYK/PA==" />
+      <Setting name="ServiceBusConnectionString" value="Endpoint=sb://sflcc-ns.servicebus.windows.net/;SharedAccessKeyName=RootManageSharedAccessKey;SharedAccessKey=+O5kcrMFJSy80t+HMfX8YPDPqi0QN5g6CDE+w3EUtL8=" />
+    </ConfigurationSettings>
+  </Role>
+</ServiceConfiguration>
